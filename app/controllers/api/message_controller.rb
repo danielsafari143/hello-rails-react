@@ -1,4 +1,4 @@
-class MessageController < ApplicationController
+class Api::MessageController < ApplicationController
     def index
       message = Message.all
       greet = rand(1..message.count)
@@ -6,3 +6,4 @@ class MessageController < ApplicationController
       render json: @greetings
     end
 end
+
